@@ -9,11 +9,11 @@ public class DragonFight {
 	public static void main(String[] args) {
 		
 		ImageIcon dragon = new ImageIcon("src/section4/dragon2.png");		
-		
-		JOptionPane.showMessageDialog(null, "Defeat the dragon to take its treasure!", "Dragon Fighter", 0, dragon);
+			JOptionPane.showMessageDialog(null, "Defeat the dragon to take its treasure!", "Dragon Fighter", 0, dragon);
+	
 		// 2. Create a variable called "playerHealth" to store your health (set it equal to 100)
 		boolean burning=false;
-		
+		boolean sheilding=false;
 		
 		
 		
@@ -68,8 +68,7 @@ public class DragonFight {
 			playerdamage=dragondamage;
 			}
 		if(attack.equals("shield")){
-		dragondamage=new Random().nextInt(50+0);
-		playerdamage+=playerhealth;
+		sheilding=true;
 		}
 		if(attack.equals("heal")){
 		playerhealth+=10;
@@ -88,12 +87,13 @@ public class DragonFight {
 			dragondamage=10;
 		dragonhealth-=dragondamage;
 		}
-		
+		if(!sheilding) {
 		// 11.  Find a random number between 0 and 35 and store it in playerDamage
 		playerdamage=new Random().nextInt(35+0);
 		// 12. Subtract this number from the player's health
 		playerhealth-=playerdamage;
-		
+		}
+		sheilding=false;
 		
 		// 13. If the user's health is less than or equal to 0
 		if (playerhealth<=0){JOptionPane.showMessageDialog(null, "the dragon has killed you");}
