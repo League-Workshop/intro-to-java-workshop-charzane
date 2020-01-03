@@ -38,7 +38,7 @@ public class DragonFight {
 		// 7. Add a closing mustache at the very bottom of this program (since we just added an opening mustache on the previous step).
 	
 		// 8. Ask the player in a pop-up if they want to attack the dragon with a yell or a kick
-		String attack=JOptionPane.showInputDialog(null, "do you want to attack with sword, kick, or torch, heal,scream, sheild, mirror");
+		String attack=JOptionPane.showInputDialog(null, "do you want to attack with sword, kick, or torch, heal,scream, shield, mirror");
 		// 9. If they typed in "yell":
 		if(attack.equals("torch")){
 			//-- Find a random number between 0 and 10 and store it in dragonDamage
